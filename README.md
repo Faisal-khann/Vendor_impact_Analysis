@@ -200,6 +200,8 @@ The final report contains:
 - Highlighted cost-effectiveness of certain vendors
 - Suggested potential areas for renegotiation and vendor replacement
 
+  <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/695dcaf9-b704-4dd3-8258-90b0ab61dc30" />
+
 ---
 
 ## 📎 Resources
@@ -212,4 +214,4 @@ The final report contains:
 *Data Analyst | Python | SQL | Power BI*
 
 📧 Contact: *thisside.faisalkhan@example.com*  
-🔗 GitHub: [github.com/yourusername](https://github.com/yourusername)
+🔗 GitHub: [github.com/yourusername](https://github.com/Faisal-khann)
