@@ -4,6 +4,10 @@ Effective inventory and sales management is crucial for optimizing profitability
 
 ---
 
+## Project Workflow
+
+<img width="1240" height="685" alt="Image" src="https://github.com/user-attachments/assets/98b9225b-ef6b-43f1-b708-2ee15e2079a8" />
+
 ## Business Problem
 
 Companies often face losses due to poor inventory practices, inefficient pricing strategies, and vendor over-dependence. This analysis aims to:
@@ -13,18 +17,6 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 - Analyze the effect of bulk purchasing on unit cost.
 - Assess inventory turnover to improve efficiency and reduce holding costs.
 - Investigate profitability variance between high- and low-performing vendors
-
-
-## Project Workflow
-
-![Vendor Performance Workflow](images/workflow.jpg)
-
-1. **Define Business Problem**
-2. **Data Collection & Preparation using SQL**
-3. **Exploratory Data Analysis (EDA) in Python**
-4. **Dashboard Creation in Power BI**
-5. **Report Writing and Business Insights**
-
 
 ## Tools & Technologies
 
@@ -39,8 +31,32 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 
 ---
 
-## Data Aggregation using SQL (Final Query)
+## Database Connection
 
+To run the analysis, establish a connection to the SQLite database:
+
+```python
+from sqlalchemy import create_engine
+import pandas as pd
+import sqlite3
+
+# Create a SQLAlchemy engine to connect to the SQLite database named 'inventory.db'
+engine = create_engine('sqlite:///inventory.db')
+
+# Connect to the SQLite database file
+conn = sqlite3.connect('inventory.db')
+
+# Checking tables present in the database
+tables = pd.read_sql_query(
+    "SELECT name FROM sqlite_master
+     WHERE type='table' ORDER BY name ASC", conn
+)
+tables
+
+
+```
+
+## Data Aggregation using SQL (Final Query)
 The query below creates the final `vendor_sales_summary` by joining purchase, sales, and freight data using Common Table Expressions (CTEs):
 
 ```python
@@ -155,32 +171,11 @@ graph TD;
 
 ---
 
-
-## Sample Python Analysis
-
-```python
-import pandas as pd
-from sqlalchemy import create_engine
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-# Connect to SQLite
-engine = create_engine('sqlite:///data/inventory.db')
-df = pd.read_sql("SELECT * FROM vendor_summary", con=engine)
-
-# Visualize average ratings
-sns.histplot(df['avg_rating'], bins=10, kde=True)
-plt.title('Average Vendor Rating Distribution')
-plt.show()
-```
-
----
-
 ## Power BI Dashboard Preview
 
 Below is a preview of the Power BI dashboard showing key vendor KPIs:
-
-![Dashboard Screenshot](images/powerbi_dashboard.png)
+<img width="794" height="562" alt="Image" src="https://github.com/user-attachments/assets/1d13efaa-17f5-4f7f-8562-7a0f03805b41" />
+<img width="932" height="528" alt="Image" src="https://github.com/user-attachments/assets/06b11830-d302-41a9-9590-b0209dffa3dc" />
 
 > 📁 File: `powerbi/Inventory_Management.pbix`
 
