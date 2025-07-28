@@ -178,7 +178,7 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 <img width="1071" height="604" alt="Image" src="https://github.com/user-attachments/assets/b2b05186-b7ff-4070-803b-2ae922487cec" />
 <img width="1070" height="603" alt="Image" src="https://github.com/user-attachments/assets/e57c3d82-f87f-44fd-829f-ca53793f5edd" />
 
-> 📁 File: `powerbi/Inventory_Management.pbix`
+> 📁 File: `Inventory_Management.pbix`
 
 ---
 
@@ -207,6 +207,7 @@ The final report contains:
 ## 📎 Resources
 
 - Full Jupyter Notebook: [`Vendor_Performance_Analysis.ipynb`](notebooks/Vendor_Performance_Analysis.ipynb)
+- Full pbix : [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiNTA4MzAyYjctNTY4NC00YzNlLWEzMGUtMDc4ZTdkNDhkOWVjIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
 
 ## 🙋‍♂️ Author
 
