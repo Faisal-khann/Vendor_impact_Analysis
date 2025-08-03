@@ -180,16 +180,6 @@ graph TD;
 
 ---
 
-## Power BI Dashboard Preview
-
-Below is a preview of the Power BI dashboard showing key vendor KPIs:
-<img width="1071" height="604" alt="Image" src="https://github.com/user-attachments/assets/b2b05186-b7ff-4070-803b-2ae922487cec" />
-<img width="1070" height="603" alt="Image" src="https://github.com/user-attachments/assets/e57c3d82-f87f-44fd-829f-ca53793f5edd" />
-
-> 📁 File: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiNTA4MzAyYjctNTY4NC00YzNlLWEzMGUtMDc4ZTdkNDhkOWVjIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
-
----
-
 ## Key Outcomes
 
 - 📌 **Cleaned & Valid Dataset**  
@@ -257,6 +247,15 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 
 - Full Jupyter Notebook: [`Vendor_Performance_Analysis.ipynb`](Final_Workbook.ipynb)
 
+## Power BI Dashboard Preview
+
+Below is a preview of the Power BI dashboard showing key vendor KPIs:
+> 📁 File: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiNTA4MzAyYjctNTY4NC00YzNlLWEzMGUtMDc4ZTdkNDhkOWVjIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
+<div>
+    <img width="1071" height="604" alt="Image" src="https://github.com/user-attachments/assets/b2b05186-b7ff-4070-803b-2ae922487cec" />
+    <img width="1070" height="603" alt="Image" src="https://github.com/user-attachments/assets/e57c3d82-f87f-44fd-829f-ca53793f5edd" />
+</div>
+
 ---
 
 ## Report Summary
@@ -276,5 +275,14 @@ The final report contains:
 **Faisal Khan**  
 *Data Analyst | Python | SQL | Power BI | Machine learnig*
 
-📧 Contact: *thisside.faisalkhan@example.com*  
-🔗 GitHub: [github.com/yourusername](https://github.com/Faisal-khann)
+## 📬 Contact
+
+For any questions, collaboration opportunities, or project-related inquiries, feel free to reach out:
+
+- 📧 **Email**: [thisside.faisalkhan@example.com](mailto:thisside.faisalkhan@example.com)  
+- 💼 **GitHub**: [github.com/Faisal-khann](https://github.com/Faisal-khann)
+
+Let’s connect and build something impactful!
+
+---
+> Made with ❤️ using Jupyter Notebook & Power BI
