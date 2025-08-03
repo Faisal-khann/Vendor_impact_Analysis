@@ -279,8 +279,8 @@ The final report contains:
 
 For any questions, collaboration opportunities, or project-related inquiries, feel free to reach out:
 
-- 📧 **Email**: [thisside.faisalkhan@example.com](mailto:thisside.faisalkhan@example.com)  
-- 💼 **GitHub**: [github.com/Faisal-khann](https://github.com/Faisal-khann)
+- 📧 [Email](mailto:thisside.faisalkhan@example.com)  
+- 💼 [LinkedIn](http://www.linkedin.com/in/faisal-khan-332b882bb)
 
 Let’s connect and build something impactful!
 
