@@ -182,6 +182,74 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 
 ---
 
+## Key Outcomes
+
+- 📌 **Cleaned & Valid Dataset**  
+  - Removed inconsistencies like negative profit margins, gross profit and zero sales.
+  - Final dataset contains **8,565 valid records** ready for analysis.
+
+- 📌 **Top Vendors & Brands Identified**  
+  - **Top Vendors by Sales**:
+    - DIAGEO NORTH AMERICA INC – `$67.99M`
+    - MARTIGNETTI COMPANIES – `$39.33M`
+    - PERNOD RICARD USA – `$32.06M`
+  - **Top Brands by Sales**:
+    - Jack Daniels No 7 Black – `$7.96M`
+    - Tito’s Handmade Vodka – `$7.40M`
+    - Grey Goose Vodka – `$7.21M`
+
+- 📌 **Underperforming High-Margin Brands**  
+  - Brands like *Santa Rita Organic* and *Debauchery Pnt Nr* had **high margins but low sales**.
+  - Recommend strategic promotions or pricing updates.
+
+- 📌 **Vendor Purchase Contribution**  
+  - **Top 10 vendors contribute 65.69%** of total purchases.
+  - Demonstrated using Pareto and Donut charts.
+
+- 📌 **Bulk Purchasing Reduces Unit Price**  
+  - Small Orders: `$39.06` per unit  
+  - Large Orders: `$10.78` per unit  
+  - Bulk purchases reduce cost by **~72%**, boosting profitability.
+
+- 📌 **Inventory Issues Detected**  
+  - Vendors like *ALISA CARR BEVERAGES* have **very low stock turnover (<1)**.
+  - Total capital locked in unsold inventory: **`$2.71M`**
+
+- 📌 **Profit Margin Confidence Intervals**  
+  - **Top-performing vendors**: Mean Margin `31.17%`, CI: `(30.74%, 31.61%)`  
+  - **Low-performing vendors**: Mean Margin `41.55%`, CI: `(40.48%, 42.62%)`  
+  - Indicates low performers rely on **premium pricing**, not volume.
+
+---
+
+## Business Insights
+
+- **Sales & Purchase Alignment**  
+  - Nearly perfect correlation (0.999) between purchase and sales quantity → **Efficient inventory turnover**
+
+- ⚠️ **Freight Cost Variability**  
+  - Wide cost range suggests **logistical inefficiencies** or bulk shipment variability.
+
+- ⚠️ **Stock Turnover ≠ Profitability**  
+  - High turnover doesn’t always translate to higher profit → Possible discounting or low-margin sales.
+
+- ⚠️ **Skewed Distributions Detected**  
+  - `GrossProfit`, `ProfitMargin`, `StockTurnover`, and `SalesToPurchaseRatio` had extreme outliers.  
+  - Addressed via filtering, capping, and visual diagnostics.
+
+- 🔁 **Consistent Data Handling**  
+  - Applied statistical thresholds and visualizations to ensure clean, actionable data for analysis and reporting.
+
+  <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/695dcaf9-b704-4dd3-8258-90b0ab61dc30" />
+
+---
+
+## Resources
+
+- Full Jupyter Notebook: [`Vendor_Performance_Analysis.ipynb`](Final_Workbook.ipynb)
+
+---
+
 ## Report Summary
 
 The final report contains:
@@ -193,20 +261,6 @@ The final report contains:
 📁 File: `report/final_report.pdf`
 
 ---
-
-## Outcomes & Insights
-
-- Identified top and low-performing vendors based on delivery time and rating
-- Highlighted cost-effectiveness of certain vendors
-- Suggested potential areas for renegotiation and vendor replacement
-
-  <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/695dcaf9-b704-4dd3-8258-90b0ab61dc30" />
-
----
-
-## Resources
-
-- Full Jupyter Notebook: [`Vendor_Performance_Analysis.ipynb`](notebooks/Vendor_Performance_Analysis.ipynb)
 
 ## Author
 
