@@ -1,6 +1,14 @@
 # 📦 Vendor Performance Analysis Project
+<p>Effective inventory and sales management is crucial for optimizing profitability in the retail and wholesale sectors.  
+This project aims to help businesses identify inefficiencies in pricing, vendor performance, and inventory turnover to enhance decision-making and overall profitability.
 
-Effective inventory and sales management is crucial for optimizing profitability in the retail and wholesale sectors. This project aims to help businesses identify inefficiencies in pricing, vendor performance, and inventory turnover to enhance decision-making and overall profitability.
+Through comprehensive data analysis using Python and SQL on a retail dataset, the project evaluates key metrics such as gross profit, profit margins, stock turnover, freight costs, and sales-to-purchase ratios.  
+By identifying top-performing vendors and brands, as well as underperforming products with high margins, the analysis supports strategic decisions related to procurement, pricing, and promotions.
+
+The insights derived also highlight how bulk purchasing can significantly reduce unit costs, contributing to improved profit margins. Additionally, the project reveals the extent of capital locked in unsold inventory and identifies vendors with low stock turnover, enabling businesses to take corrective actions.
+
+All findings are visualized through intuitive plots and dashboards, facilitating easy interpretation for stakeholders and aiding in the formulation of data-driven business strategies.
+</p>
 
 ---
 
@@ -197,6 +205,7 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
     - Jack Daniels No 7 Black – `$7.96M`
     - Tito’s Handmade Vodka – `$7.40M`
     - Grey Goose Vodka – `$7.21M`
+ <img width="1500" height="483" alt="Image" src="https://github.com/user-attachments/assets/0ac76af0-b694-4ec4-a908-2ce6f5a3daf7" />
 
 - 📌 **Underperforming High-Margin Brands**  
   - Brands like *Santa Rita Organic* and *Debauchery Pnt Nr* had **high margins but low sales**.
@@ -205,6 +214,7 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 - 📌 **Vendor Purchase Contribution**  
   - **Top 10 vendors contribute 65.69%** of total purchases.
   - Demonstrated using Pareto and Donut charts.
+<img width="1042" height="647" alt="Image" src="https://github.com/user-attachments/assets/fbbfbcf7-d8d6-42b5-a0a0-547e60dd4406" />
 
 - 📌 **Bulk Purchasing Reduces Unit Price**  
   - Small Orders: `$39.06` per unit  
@@ -219,6 +229,7 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
   - **Top-performing vendors**: Mean Margin `31.17%`, CI: `(30.74%, 31.61%)`  
   - **Low-performing vendors**: Mean Margin `41.55%`, CI: `(40.48%, 42.62%)`  
   - Indicates low performers rely on **premium pricing**, not volume.
+<img width="1154" height="629" alt="Image" src="https://github.com/user-attachments/assets/8aaf5e91-7002-4738-a8bc-99e88ab24eeb" />
 
 ---
 
@@ -239,9 +250,7 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 
 - 🔁 **Consistent Data Handling**  
   - Applied statistical thresholds and visualizations to ensure clean, actionable data for analysis and reporting.
-
-  <img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/695dcaf9-b704-4dd3-8258-90b0ab61dc30" />
-
+ 
 ---
 
 ## Resources
