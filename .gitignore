@@ -1,5 +1,4 @@
 data/
-inventory.db/
 inventory.db
 .ipynb_checkpoints/
 logs/
