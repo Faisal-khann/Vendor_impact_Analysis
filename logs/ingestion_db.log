@@ -1,0 +1,30 @@
+2025-07-24 20:51:44,410 - INFO - Starting to load raw CSV files from 'data' directory.
+2025-07-24 20:51:44,410 - INFO - Starting chunked ingestion for file: begin_inventory.csv
+2025-07-24 20:51:46,366 - INFO - Successfully ingested file: begin_inventory.csv into table: begin_inventory
+2025-07-24 20:51:46,366 - INFO - Starting chunked ingestion for file: end_inventory.csv
+2025-07-24 20:51:48,635 - INFO - Successfully ingested file: end_inventory.csv into table: end_inventory
+2025-07-24 20:51:48,635 - INFO - Starting chunked ingestion for file: purchases.csv
+2025-07-24 20:52:24,279 - INFO - Successfully ingested file: purchases.csv into table: purchases
+2025-07-24 20:52:24,279 - INFO - Starting chunked ingestion for file: purchase_prices.csv
+2025-07-24 20:52:24,420 - INFO - Successfully ingested file: purchase_prices.csv into table: purchase_prices
+2025-07-24 20:52:24,420 - INFO - Starting chunked ingestion for file: sales.csv
+2025-07-24 20:55:34,267 - INFO - Successfully ingested file: sales.csv into table: sales
+2025-07-24 20:55:34,267 - INFO - Starting chunked ingestion for file: vendor_invoice.csv
+2025-07-24 20:55:34,337 - INFO - Successfully ingested file: vendor_invoice.csv into table: vendor_invoice
+2025-07-24 20:55:34,337 - INFO - Finished loading all raw CSV files.
+2025-07-24 20:55:34,337 - INFO - Total Time Taken: 3.83 minutes
+2025-07-25 14:56:19,593 - INFO - Starting to load raw CSV files from 'data' directory.
+2025-07-25 14:56:19,595 - INFO - Starting chunked ingestion for file: begin_inventory.csv
+2025-07-25 14:56:21,841 - INFO - Successfully ingested file: begin_inventory.csv into table: begin_inventory
+2025-07-25 14:56:21,841 - INFO - Starting chunked ingestion for file: end_inventory.csv
+2025-07-25 14:56:24,519 - INFO - Successfully ingested file: end_inventory.csv into table: end_inventory
+2025-07-25 14:56:24,519 - INFO - Starting chunked ingestion for file: purchases.csv
+2025-07-25 14:57:03,225 - INFO - Successfully ingested file: purchases.csv into table: purchases
+2025-07-25 14:57:03,225 - INFO - Starting chunked ingestion for file: purchase_prices.csv
+2025-07-25 14:57:03,376 - INFO - Successfully ingested file: purchase_prices.csv into table: purchase_prices
+2025-07-25 14:57:03,376 - INFO - Starting chunked ingestion for file: sales.csv
+2025-07-25 21:54:48,119 - INFO - Successfully ingested file: sales.csv into table: sales
+2025-07-25 21:54:48,119 - INFO - Starting chunked ingestion for file: vendor_invoice.csv
+2025-07-25 21:54:48,356 - INFO - Successfully ingested file: vendor_invoice.csv into table: vendor_invoice
+2025-07-25 21:54:48,356 - INFO - Finished loading all raw CSV files.
+2025-07-25 21:54:48,356 - INFO - Total Time Taken: 418.48 minutes
