@@ -212,4 +212,4 @@ For any questions, collaboration opportunities, or project-related inquiries, fe
 Let’s connect and build something impactful!
 
 ---
-> Made with ❤️ using Jupyter Notebook & Power BI
+> Made with ❤️ using Jupyter Notebook, Python, SQL & Power BI
