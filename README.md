@@ -10,13 +10,13 @@
 - [Business Problem](#business-problem)
 - [Dataset](#dataset)
 - [Tools & Technologies](#tools--technologies)
-- [Project Structure](#📂Project-Structure)
+- [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
 - [Key Outcomes](#Key-Outcomes)
 - [Business Insights](#Business-Insights)
 - [Dashboard Preview](#Dashboard-Preview)
 - [How to Run This Project](#How-to-Run-This-Project)
-- [Author & Contact](#Author-&-Contact)
+- [Author & Contact](#contact)
 
 ---
 ## Overview
@@ -61,7 +61,7 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 - Summary table created from ingested data and used for analysis
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 vendor-performance-analysis/
