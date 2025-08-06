@@ -190,7 +190,7 @@ graph TD;
     
 4. Open and Run Notebooks
    
-    ○ `notebooks/exploratory_data_analysis.ipynb`  
+    ○ `notebooks/sql-powered_data_analysis.ipynb`  
     ○ `notebooks/vendor_performance_analysis.ipynb`
     
  6. Open Power BI Dashboard:
