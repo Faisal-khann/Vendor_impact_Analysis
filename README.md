@@ -1,13 +1,32 @@
-# 📦 Vendor Performance Analysis Project
-<p>Effective inventory and sales management is crucial for optimizing profitability in the retail and wholesale sectors.  
-This project aims to help businesses identify inefficiencies in pricing, vendor performance, and inventory turnover to enhance decision-making and overall profitability.
+# 📦 Vendor Performance Analysis - Inventory Management
 
+<em>Analyzing vendor efficiency and profitability to support strategic purchasing and inventory decisions using **SQL**, **Python**, and **Power BI**.</em>
+
+---
+
+## 📌 Table of Contents
+- [Overview](#Overview)
+- [Project Workflow](#Project-Workflow)
+- [Business Problem](#business-problem)
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools--technologies)
+- [Project Structure](#project-structure)
+- [Data Cleaning & Preparation](#data-cleaning--preparation)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Research Questions & Key Findings](#research-questions--key-findings)
+- [Dashboard](#dashboard)
+- [How to Run This Project](#how-to-run-this-project)
+- [Final Recommendations](#final-recommendations)
+- [Author & Contact](#Contact)
+
+---
+## 📄 Overview
+<p> This project evaluates vendor performance and retail inventory dynamics to drive strategic insights for purchasing, pricing, and inventory optimization. A complete data pipeline was built using SQL for ETL, Python for analysis and hypothesis testing, and Power BI for visualization.
+    
 Through comprehensive data analysis using Python and SQL on a retail dataset, the project evaluates key metrics such as gross profit, profit margins, stock turnover, freight costs, and sales-to-purchase ratios.  
 By identifying top-performing vendors and brands, as well as underperforming products with high margins, the analysis supports strategic decisions related to procurement, pricing, and promotions.
 
 The insights derived also highlight how bulk purchasing can significantly reduce unit costs, contributing to improved profit margins. Additionally, the project reveals the extent of capital locked in unsold inventory and identifies vendors with low stock turnover, enabling businesses to take corrective actions.
-
-All findings are visualized through intuitive plots and dashboards, facilitating easy interpretation for stakeholders and aiding in the formulation of data-driven business strategies.
 </p>
 
 ---
@@ -22,7 +41,7 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 
 - Identify underperforming brands needing promotional or pricing adjustments.
 - Determine top vendors contributing to sales and gross profit.
-- Analyze the effect of bulk purchasing on unit cost.
+- Analyze the cost-benefit of bulk purchasing.
 - Assess inventory turnover to improve efficiency and reduce holding costs.
 - Investigate profitability variance between high- and low-performing vendors
 
@@ -38,6 +57,9 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 | **Matplotlib/Seaborn** | Visual analytics     |
 
 ---
+## Dataset
+- Multiple CSV files located in /data/ folder (sales, vendors, inventory)
+- Summary table created from ingested data and used for analysis
 
 ## Database Connection
 
@@ -135,30 +157,24 @@ ORDER BY ps.TotalPurchaseDollars DESC
 ## 📂 Folder Structure
 
 ```
-Vendor_Performance_Analysis/
+vendor-performance-analysis/
 │
-├── data/
-│   └── inventory.db                  # SQLite database
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── Vendor Performance Report.pdf
 │
-├── sql/                               # SQL scripts for data cleaning and aggregation
+├── notebooks/                  # Jupyter notebooks
+│   ├── ingesting-logs.ipynb
+    ├── sql-powered_data_analysis.ipynb
+│   ├── vendor_performance_analysis.ipynb
 │
-├── notebooks/
-│   └── Vendor_Performance_Analysis.ipynb  # Main notebook
+├── scripts/                    # Python scripts for ingestion and processing
+│   ├── ingestion_db.py
+│   └── get_vendor_summary.py
 │
-│
-├── logs/
-│   └── ingestion.log                 # Logs for ETL operations
-│
-├── scripts/
-│   └── ingest_to_db.py              # Save aggregated table to DB
-│
-├── powerbi/
-│   └── dashboard.pbix               # Power BI dashboard file
-│
-├── report/
-│   └── final_report.pdf             # Business summary
-│
-└── README.md                        # Project documentation
+├── dashboard/                  # Power BI dashboard file
+│   └── vendor_performance_dashboard.pbix
 ```
 
 ---
