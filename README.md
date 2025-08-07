@@ -1,13 +1,30 @@
-# 📦 Vendor Performance Analysis Project
-<p>Effective inventory and sales management is crucial for optimizing profitability in the retail and wholesale sectors.  
-This project aims to help businesses identify inefficiencies in pricing, vendor performance, and inventory turnover to enhance decision-making and overall profitability.
+# 📦 Vendor Performance Analysis - Inventory Management
 
+<em>Analyzing vendor efficiency and profitability to support strategic purchasing and inventory decisions using **SQL**, **Python**, and **Power BI**.</em>
+
+---
+
+## 📌 Table of Contents
+- [Overview](#Overview)
+- [Project Workflow](#Project-Workflow)
+- [Business Problem](#business-problem)
+- [Dataset](#dataset)
+- [Tools & Technologies](#tools--technologies)
+- [Project Structure](#Project-Structure)
+- [Data Pipeline Overview](#Data-Pipeline-Overview)
+- [Key Outcomes](#Key-Outcomes)
+- [Business Insights](#Business-Insights)
+- [Dashboard Preview](#Dashboard-Preview)
+- [How to Run This Project](#How-to-Run-This-Project)
+- [Author & Contact](#author--contact)
+---
+## Overview
+<p> This project evaluates vendor performance and retail inventory dynamics to drive strategic insights for purchasing, pricing, and inventory optimization. A complete data pipeline was built using SQL for ETL, Python for analysis and hypothesis testing, and Power BI for visualization.
+    
 Through comprehensive data analysis using Python and SQL on a retail dataset, the project evaluates key metrics such as gross profit, profit margins, stock turnover, freight costs, and sales-to-purchase ratios.  
 By identifying top-performing vendors and brands, as well as underperforming products with high margins, the analysis supports strategic decisions related to procurement, pricing, and promotions.
 
 The insights derived also highlight how bulk purchasing can significantly reduce unit costs, contributing to improved profit margins. Additionally, the project reveals the extent of capital locked in unsold inventory and identifies vendors with low stock turnover, enabling businesses to take corrective actions.
-
-All findings are visualized through intuitive plots and dashboards, facilitating easy interpretation for stakeholders and aiding in the formulation of data-driven business strategies.
 </p>
 
 ---
@@ -22,7 +39,7 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 
 - Identify underperforming brands needing promotional or pricing adjustments.
 - Determine top vendors contributing to sales and gross profit.
-- Analyze the effect of bulk purchasing on unit cost.
+- Analyze the cost-benefit of bulk purchasing.
 - Assess inventory turnover to improve efficiency and reduce holding costs.
 - Investigate profitability variance between high- and low-performing vendors
 
@@ -38,127 +55,32 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 | **Matplotlib/Seaborn** | Visual analytics     |
 
 ---
+## Dataset
+- Multiple CSV files located in /data/ folder (sales, vendors, inventory)
+- Summary table created from ingested data and used for analysis
+---
 
-## Database Connection
-
-To run the analysis, establish a connection to the SQLite database:
-
-```python
-from sqlalchemy import create_engine
-import pandas as pd
-import sqlite3
-
-# Create a SQLAlchemy engine to connect to the SQLite database named 'inventory.db'
-engine = create_engine('sqlite:///inventory.db')
-
-# Connect to the SQLite database file
-conn = sqlite3.connect('inventory.db')
-
-# Checking tables present in the database
-tables = pd.read_sql_query(
-    "SELECT name FROM sqlite_master
-     WHERE type='table' ORDER BY name ASC", conn
-)
-tables
-
+## Project Structure
 
 ```
-
-## Data Aggregation using SQL (Final Query)
-The query below creates the final `vendor_sales_summary` by joining purchase, sales, and freight data using Common Table Expressions (CTEs):
-
-```python
-vendor_sales_summary = pd.read_sql_query("""
-WITH FreightSummary AS (
-    SELECT
-        VendorNumber, 
-        SUM(Freight) AS FreightCost 
-    FROM vendor_invoice
-    GROUP BY VendorNumber
-), 
-PurchaseSummary AS (
-    SELECT
-        p.VendorNumber,
-        p.VendorName,
-        p.Brand, 
-        p.Description, 
-        p.PurchasePrice, 
-        pp.Volume, 
-        pp.Price AS ActualPrice,
-        SUM(p.Quantity) AS TotalPurchaseQuantity,
-        SUM(p.Dollars) AS TotalPurchaseDollars
-    FROM purchases p
-    JOIN purchase_prices pp
-        ON p.Brand = pp.Brand
-    WHERE p.PurchasePrice > 0
-    GROUP BY 
-        p.VendorNumber, p.VendorName, p.Brand, p.Description, p.PurchasePrice, pp.Price, pp.Volume
-),
-SalesSummary AS (
-    SELECT 
-        VendorNo, 
-        Brand, 
-        SUM(SalesDollars) AS TotalSalesDollars,
-        SUM(SalesPrice) AS TotalSalesPrice,
-        SUM(SalesQuantity) AS TotalSalesQuantity,
-        SUM(ExciseTax) AS TotalExciseTax
-    FROM sales
-    GROUP BY VendorNo, Brand
-)
-SELECT 
-    ps.VendorNumber,
-    ps.VendorName, 
-    ps.Brand,
-    ps.Description, 
-    ps.PurchasePrice, 
-    ps.ActualPrice,
-    ps.Volume, 
-    ps.TotalPurchaseQuantity, 
-    ps.TotalPurchaseDollars,
-    ss.TotalSalesQuantity,
-    ss.TotalSalesDollars,
-    ss.TotalSalesPrice,
-    ss.TotalExciseTax,
-    fs.FreightCost
-FROM PurchaseSummary ps 
-LEFT JOIN SalesSummary ss
-    ON ps.VendorNumber = ss.VendorNo
-    AND ps.Brand = ss.Brand
-LEFT JOIN FreightSummary fs
-    ON ps.VendorNumber = fs.VendorNumber
-ORDER BY ps.TotalPurchaseDollars DESC
-""", conn)
-
-```
-
-
-## 📂 Folder Structure
-
-```
-Vendor_Performance_Analysis/
+vendor-performance-analysis/
 │
-├── data/
-│   └── inventory.db                  # SQLite database
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── Vendor Performance Report.pdf
 │
-├── sql/                               # SQL scripts for data cleaning and aggregation
+├── notebooks/                  # Jupyter notebooks
+│   ├── ingesting-logs.ipynb
+    ├── sql-powered_data_analysis.ipynb
+│   ├── vendor_performance_analysis.ipynb
 │
-├── notebooks/
-│   └── Vendor_Performance_Analysis.ipynb  # Main notebook
+├── scripts/                    # Python scripts for ingestion and processing
+│   ├── ingestion_db.py
+│   └── get_vendor_summary.py
 │
-│
-├── logs/
-│   └── ingestion.log                 # Logs for ETL operations
-│
-├── scripts/
-│   └── ingest_to_db.py              # Save aggregated table to DB
-│
-├── powerbi/
-│   └── dashboard.pbix               # Power BI dashboard file
-│
-├── report/
-│   └── final_report.pdf             # Business summary
-│
-└── README.md                        # Project documentation
+├── dashboard/                  # Power BI dashboard file
+│   └── vendor_performance_dashboard.pbix
 ```
 
 ---
@@ -238,18 +160,13 @@ graph TD;
   - `GrossProfit`, `ProfitMargin`, `StockTurnover`, and `SalesToPurchaseRatio` had extreme outliers.  
   - Addressed via filtering, capping, and visual diagnostics.
 
-- 🔁 **Consistent Data Handling**  
+- **Consistent Data Handling**  
   - Applied statistical thresholds and visualizations to ensure clean, actionable data for analysis and reporting.
  
 ---
+## Dashboard Preview
 
-## Resources
-
-- Full Jupyter Notebook: [`Vendor_Performance_Analysis.ipynb`](Final_Workbook.ipynb)
-
-## Power BI Dashboard Preview
-
-Below is a preview of the Power BI dashboard showing key vendor KPIs:
+`Below is a preview of the Power BI dashboard showing key vendor KPIs:`
 > 📁 File: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiNTA4MzAyYjctNTY4NC00YzNlLWEzMGUtMDc4ZTdkNDhkOWVjIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
 <div>
     <img width="1071" height="604" alt="Image" src="https://github.com/user-attachments/assets/b2b05186-b7ff-4070-803b-2ae922487cec" />
@@ -257,25 +174,35 @@ Below is a preview of the Power BI dashboard showing key vendor KPIs:
 </div>
 
 ---
+## How to Run This Project
+ 
+ 1. Clone the repository:
+    
+         git clone https://github.com/yourusername/vendor-performance-analysis.git
 
-## Report Summary
+ 2. Load the CSVs and ingest into database:
 
-The final report contains:
-- Project Goals
-- Analysis Methodology
-- Key Insights
-- Recommendations
+        python scripts/ingestion_db.py
 
-📁 File: `report/final_report.pdf`
+ 3. Create vendor summary table:
+
+        python scripts/get_vendor_summary.py
+    
+4. Open and Run Notebooks
+   
+    ○ `notebooks/sql-powered_data_analysis.ipynb`  
+    ○ `notebooks/vendor_performance_analysis.ipynb`
+    
+ 6. Open Power BI Dashboard:
+
+        Dashboard/Inventory_Management.pbix
 
 ---
 
-## Author
+## Author & Contact
 
 **Faisal Khan**  
-*Data Analyst | Python | SQL | Power BI | Machine learnig*
-
-## 📬 Contact
+*Data Analyst*
 
 For any questions, collaboration opportunities, or project-related inquiries, feel free to reach out:
 
@@ -285,4 +212,4 @@ For any questions, collaboration opportunities, or project-related inquiries, fe
 Let’s connect and build something impactful!
 
 ---
-> Made with ❤️ using Jupyter Notebook & Power BI
+> Made with ❤️ using Jupyter Notebook, Python, SQL & Power BI
