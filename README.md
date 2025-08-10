@@ -1,4 +1,4 @@
-# 📦 Vendor performance Analysis - Inventory Management
+# 📦 Vendor impact Analysis - Inventory Management
 
 <em>Analyzing vendor efficiency and profitability to support strategic purchasing and inventory decisions using **SQL**, **Python**, and **Power BI**.</em>
 
@@ -19,7 +19,7 @@
 - [Author & Contact](#author--contact)
 ---
 ## Overview
-<p> This project evaluates vendor performance and retail inventory dynamics to drive strategic insights for purchasing, pricing, and inventory optimization. A complete data pipeline was built using SQL for ETL, Python for analysis and hypothesis testing, and Power BI for visualization.
+<p> This project evaluates vendor impact (overall performance) and retail inventory dynamics to drive strategic insights for purchasing, pricing, and inventory optimization. A complete data pipeline was built using SQL for ETL, Python for analysis and hypothesis testing, and Power BI for visualization.
     
 Through comprehensive data analysis using Python and SQL on a retail dataset, the project evaluates key metrics such as gross profit, profit margins, stock turnover, freight costs, and sales-to-purchase ratios.  
 By identifying top-performing vendors and brands, as well as underperforming products with high margins, the analysis supports strategic decisions related to procurement, pricing, and promotions.
@@ -73,7 +73,7 @@ vendor-performance-analysis/
 ├── notebooks/                  # Jupyter notebooks
 │   ├── ingesting-logs.ipynb
     ├── sql-powered_data_analysis.ipynb
-│   ├── vendor_performance_analysis.ipynb
+│   ├── vendor_impact_analysis.ipynb
 │
 ├── scripts/                    # Python scripts for ingestion and processing
 │   ├── ingestion_db.py
