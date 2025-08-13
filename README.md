@@ -12,9 +12,9 @@
 - [Tools & Technologies](#tools--technologies)
 - [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
+- [Dashboard Preview](#Dashboard-Preview)
 - [Key Outcomes](#Key-Outcomes)
 - [Business Insights](#Business-Insights)
-- [Dashboard Preview](#Dashboard-Preview)
 - [How to Run This Project](#How-to-Run-This-Project)
 - [Author & Contact](#author--contact)
 ---
@@ -150,13 +150,13 @@ graph TD;
 - **Sales & Purchase Alignment**  
   - Nearly perfect correlation (0.999) between purchase and sales quantity → **Efficient inventory turnover**
 
-- ⚠️ **Freight Cost Variability**  
+- **Freight Cost Variability**  
   - Wide cost range suggests **logistical inefficiencies** or bulk shipment variability.
 
-- ⚠️ **Stock Turnover ≠ Profitability**  
+- **Stock Turnover ≠ Profitability**  
   - High turnover doesn’t always translate to higher profit → Possible discounting or low-margin sales.
 
-- ⚠️ **Skewed Distributions Detected**  
+- **Skewed Distributions Detected**  
   - `GrossProfit`, `ProfitMargin`, `StockTurnover`, and `SalesToPurchaseRatio` had extreme outliers.  
   - Addressed via filtering, capping, and visual diagnostics.
 
@@ -167,10 +167,11 @@ graph TD;
 ## Dashboard Preview
 
 `Below is a preview of the Power BI dashboard showing key vendor KPIs:`
-> 📁 File: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiNTA4MzAyYjctNTY4NC00YzNlLWEzMGUtMDc4ZTdkNDhkOWVjIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
+> 📁 Live-Dashboard: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiMDkzMGFiNGUtODMxZS00M2RhLTk2MDgtN2JkZWQzZjc2OGMzIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
 <div>
-    <img width="1071" height="604" alt="Image" src="https://github.com/user-attachments/assets/b2b05186-b7ff-4070-803b-2ae922487cec" />
-    <img width="1070" height="603" alt="Image" src="https://github.com/user-attachments/assets/e57c3d82-f87f-44fd-829f-ca53793f5edd" />
+    <img width="1165" height="658" alt="Image" src="https://github.com/user-attachments/assets/afb42d15-ceba-472e-8439-4cec9e6a65fa" />
+
+<img width="1172" height="658" alt="Image" src="https://github.com/user-attachments/assets/425fc5e6-2d65-48e7-9e85-b5e37d6c575e" />
 </div>
 
 ---
@@ -178,7 +179,7 @@ graph TD;
  
  1. Clone the repository:
     
-         git clone https://github.com/yourusername/vendor-performance-analysis.git
+         git clone https://github.com/yourusername/vendor-impact-analysis.git
 
  2. Load the CSVs and ingest into database:
 
@@ -191,7 +192,7 @@ graph TD;
 4. Open and Run Notebooks
    
     ○ `notebooks/sql-powered_data_analysis.ipynb`  
-    ○ `notebooks/vendor_performance_analysis.ipynb`
+    ○ `notebooks/vendor_impact_analysis.ipynb`
     
  6. Open Power BI Dashboard:
 
