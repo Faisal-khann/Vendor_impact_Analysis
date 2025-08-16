@@ -171,7 +171,7 @@ graph TD;
 <div>
     <img width="1165" height="658" alt="Image" src="https://github.com/user-attachments/assets/afb42d15-ceba-472e-8439-4cec9e6a65fa" />
 
-<img width="1172" height="658" alt="Image" src="https://github.com/user-attachments/assets/425fc5e6-2d65-48e7-9e85-b5e37d6c575e" />
+<img width="963" height="544" alt="Image" src="https://github.com/user-attachments/assets/7b8ec3cd-d50c-4931-8960-1008320ba95b" />
 </div>
 
 ---
