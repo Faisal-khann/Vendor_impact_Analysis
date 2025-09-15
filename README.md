@@ -9,6 +9,7 @@
 - [Project Workflow](#Project-Workflow)
 - [Business Problem](#business-problem)
 - [Dataset](#dataset)
+- [Ingestion Script]()
 - [Tools & Technologies](#tools--technologies)
 - [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
@@ -58,6 +59,32 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 ## Dataset
 - Multiple CSV files located in /data/ folder (sales, vendors, inventory)
 - Summary table created from ingested data and used for analysis
+---
+
+## Script Overview
+<strong><em>Need for the Script</em></strong>
+
+Data is continuously received from the server in the form of CSV files.  
+Managing these CSV files manually is **time-consuming** and **error-prone**.  
+
+By using a script, we can:
+
+- **Automate** the process of storing CSV files into a database.  
+- Store all data in a single database (`inventory.db`), making it easier to **query** and **analyze**.  
+- Ensure **data consistency** and **integrity**.  
+- Provide a **scalable solution** for handling continuous incoming data.  
+
+<strong><em>Example of Automation</em></strong>
+
+<em>For example, if your data is coming every **15 minutes** in the form of CSV files, you can write a script that runs automatically every 15 minutes.</em>
+
+Whenever the script runs, it will:
+
+1. Read the latest CSV file.  
+2. **Store the data into the database**.  
+
+This way, the database remains **up-to-date without any manual intervention**, and scripting helps maintain continuous data processing efficiently.
+
 ---
 
 ## Project Structure
