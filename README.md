@@ -8,8 +8,7 @@
 - [Overview](#Overview)
 - [Project Workflow](#Project-Workflow)
 - [Business Problem](#business-problem)
-- [Dataset](#dataset)
-- [Ingestion Script](#script-oveview)
+- [Ingestion Script](#Script-Overview)
 - [Tools & Technologies](#tools--technologies)
 - [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
@@ -56,13 +55,13 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 | **Matplotlib/Seaborn** | Visual analytics     |
 
 ---
-## Dataset
+<!--## Dataset
 - Multiple CSV files located in /data/ folder (sales, vendors, inventory)
 - Summary table created from ingested data and used for analysis
----
+--->
 
 ## Script Overview
-<strong><em><u>Need for the Script</u></em></strong>
+`Need for the Script`
 
 Data is continuously received from the server in the form of CSV files.  
 Managing these CSV files manually is **time-consuming** and **error-prone**.  
@@ -74,7 +73,7 @@ By using a script, we can:
 - Ensure **data consistency** and **integrity**.  
 - Provide a **scalable solution** for handling continuous incoming data.  
 
-<strong><em><u>Example of Automation</u></em></strong>
+`Example of Automation`
 
 <em>For example, if your data is coming every **15 minutes** in the form of CSV files, you can write a script that runs automatically every 15 minutes.</em>
 
@@ -98,9 +97,9 @@ vendor-performance-analysis/
 ├── Vendor Performance Report.pdf
 │
 ├── notebooks/                  # Jupyter notebooks
-│   ├── ingesting-logs.ipynb
-    ├── sql-powered_data_analysis.ipynb
-│   ├── vendor_impact_analysis.ipynb
+│   ├── Ingestion_logs.ipynb
+    ├── Eda_with_Sql.ipynb
+│   ├── Main_Workbook.ipynb
 │
 ├── scripts/                    # Python scripts for ingestion and processing
 │   ├── ingestion_db.py
