@@ -9,7 +9,7 @@
 - [Project Workflow](#Project-Workflow)
 - [Business Problem](#business-problem)
 - [Dataset](#dataset)
-- [Ingestion Script]()
+- [Ingestion Script](#script-oveview)
 - [Tools & Technologies](#tools--technologies)
 - [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
@@ -62,7 +62,7 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 ---
 
 ## Script Overview
-<strong><em>Need for the Script</em></strong>
+<strong><em><u>Need for the Script</u></em></strong>
 
 Data is continuously received from the server in the form of CSV files.  
 Managing these CSV files manually is **time-consuming** and **error-prone**.  
@@ -74,7 +74,7 @@ By using a script, we can:
 - Ensure **data consistency** and **integrity**.  
 - Provide a **scalable solution** for handling continuous incoming data.  
 
-<strong><em>Example of Automation</em></strong>
+<strong><em><u>Example of Automation</u></em></strong>
 
 <em>For example, if your data is coming every **15 minutes** in the form of CSV files, you can write a script that runs automatically every 15 minutes.</em>
 
