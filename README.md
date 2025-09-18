@@ -8,7 +8,7 @@
 - [Overview](#Overview)
 - [Project Workflow](#Project-Workflow)
 - [Business Problem](#business-problem)
-- [Dataset](#dataset)
+- [Ingestion Script](#Script-Overview)
 - [Tools & Technologies](#tools--technologies)
 - [Project Structure](#Project-Structure)
 - [Data Pipeline Overview](#Data-Pipeline-Overview)
@@ -55,9 +55,35 @@ Companies often face losses due to poor inventory practices, inefficient pricing
 | **Matplotlib/Seaborn** | Visual analytics     |
 
 ---
-## Dataset
+<!--## Dataset
 - Multiple CSV files located in /data/ folder (sales, vendors, inventory)
 - Summary table created from ingested data and used for analysis
+--->
+
+## Script Overview
+`Need for the Script`
+
+Data is continuously received from the server in the form of CSV files.  
+Managing these CSV files manually is **time-consuming** and **error-prone**.  
+
+By using a script, we can:
+
+- **Automate** the process of storing CSV files into a database.  
+- Store all data in a single database (`inventory.db`), making it easier to **query** and **analyze**.  
+- Ensure **data consistency** and **integrity**.  
+- Provide a **scalable solution** for handling continuous incoming data.  
+
+`Example of Automation`
+
+<em>For example, if your data is coming every **15 minutes** in the form of CSV files, you can write a script that runs automatically every 15 minutes.</em>
+
+Whenever the script runs, it will:
+
+1. Read the latest CSV file.  
+2. **Store the data into the database**.  
+
+This way, the database remains **up-to-date without any manual intervention**, and scripting helps maintain continuous data processing efficiently.
+
 ---
 
 ## Project Structure
@@ -71,9 +97,9 @@ vendor-performance-analysis/
 ├── Vendor Performance Report.pdf
 │
 ├── notebooks/                  # Jupyter notebooks
-│   ├── ingesting-logs.ipynb
-    ├── sql-powered_data_analysis.ipynb
-│   ├── vendor_impact_analysis.ipynb
+│   ├── Ingestion_logs.ipynb
+    ├── Eda_with_Sql.ipynb
+│   ├── Main_Workbook.ipynb
 │
 ├── scripts/                    # Python scripts for ingestion and processing
 │   ├── ingestion_db.py
