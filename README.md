@@ -229,14 +229,13 @@ graph TD;
 ## Author & Contact
 
 **Faisal Khan**  
-*Data Analyst*
+*Data Analyst | Aspiring Data Scientist*
 
 For any questions, collaboration opportunities, or project-related inquiries, feel free to reach out:
 
-- 📧 [Email](mailto:thisside.faisalkhan@example.com)  
-- 💼 [LinkedIn](http://www.linkedin.com/in/faisal-khan-332b882bb)
-
-Let’s connect and build something impactful!
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-orange?style=for-the-badge&logo=google-chrome&logoColor=white)](https://personal-portfolio-alpha-lake.vercel.app/)<br>
+[![Email](https://img.shields.io/badge/Email-Faisal%20Khan-blue?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thisside.faisalkhan@example.com)<br>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faisal%20Khan-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faisal-khan23)
 
 ---
 > Made with ❤️ using Jupyter Notebook, Python, SQL & Power BI.
