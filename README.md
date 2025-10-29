@@ -195,9 +195,11 @@ graph TD;
 `Below is a preview of the Power BI dashboard showing key vendor KPIs:`
 > 📁 Live-Dashboard: [`Inventory_Management.pbix`](https://app.powerbi.com/view?r=eyJrIjoiMDkzMGFiNGUtODMxZS00M2RhLTk2MDgtN2JkZWQzZjc2OGMzIiwidCI6IjQyYjUxMzUzLTZhMzctNDA5Zi1hMmZlLTc3OGE5YmUzMTllNCJ9)
 <div>
-    <img width="1165" height="658" alt="Image" src="https://github.com/user-attachments/assets/afb42d15-ceba-472e-8439-4cec9e6a65fa" />
+    <img width="1153" height="646" alt="Image" src="https://github.com/user-attachments/assets/07a91667-18d7-4e15-90b7-a6516826a867" />
 
-<img width="963" height="544" alt="Image" src="https://github.com/user-attachments/assets/7b8ec3cd-d50c-4931-8960-1008320ba95b" />
+<img width="1147" height="647" alt="Image" src="https://github.com/user-attachments/assets/809940c9-d7b3-4cd3-86f5-ed01a7746520" />
+
+<img width="1151" height="649" alt="Image" src="https://github.com/user-attachments/assets/7b7e637d-4a5f-40a6-98c3-0774ade309f2" />
 </div>
 
 ---
